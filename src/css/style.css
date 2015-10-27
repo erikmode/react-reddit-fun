@@ -1,0 +1,47 @@
+.my-logo {
+	width: 100px;
+	margin-top: -15px;
+}
+
+
+.author b {
+    color: #afb3b9;
+}
+
+.storyImg {
+	max-width: 300px;
+    margin: 5px 0 5px 0;
+}
+
+.story td {
+	border-top: solid #d2d0d0 1pt;
+}
+
+.comment {
+    font-size: 15px;
+    margin: 15px;
+    color: #afb3b9;
+    text-decoration: none;
+
+}
+
+.score {
+    font-size: 36px;
+    margin: 15px;
+    color: #afb3b9;
+}
+
+.subreddits-dropdown {
+    width: 300px;
+    float: left;
+    margin: 0 10px 0 10px;
+}
+
+.redditTable {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.event-button{
+    margin: 0 5px;
+}
