@@ -26,12 +26,10 @@ var RedditStore = assign({}, EventEmitter.prototype, {
 	},
 
 	getAllReddits: function() {
-		console.log('REDDITSTORE gettAllReddits: ', _reddit);
 		return _reddit;
 	},
 
 	getSubReddits: function() {
-		console.log('REDDITSTORE getSubReddits: ', _subreddits);
 		return _subreddits;
 	}
 
@@ -44,7 +42,6 @@ Dispatcher.register(function(action) {
 			RedditStore.emitChange();
 			break;
 		case ActionTypes.REDDIT_OBJECT:
-			console.log('register reddit payload in store', action);
 			_reddit = action.reddit;
 			RedditStore.emitChange();
 			break;

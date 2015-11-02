@@ -11,9 +11,6 @@ var Dropdown = require('../common/dropdown');
 var RedditPage = React.createClass({
 
 	getInitialState: function(){
-
-		var teststuff = RedditStore.getSubReddits();
-		console.log('balls', teststuff);
 		return {
 			subreddits: RedditStore.getSubReddits()
 		};
@@ -27,26 +24,20 @@ var RedditPage = React.createClass({
 	},
 
 	componentWillMount: function() {
-		console.log('mounting auhtorpage component');
 		RedditStore.addChangeListener(this._onChange);
 	},
 
 	//clean up when this component is unmounted.
 	componentWillUnmount: function() {
-		console.log('unmounting auhtorpage component');
 		RedditStore.removeChangeListener(this._onChange);
 	},
 	_onChange: function() {
-		console.log('on change listener in redditpage');
 		this.setState({reddits: RedditStore.getAllReddits() });
 	},
 
 	render: function () {
-		console.log('state ', this.state);
-
 
 		var dropdownArray = this.state.subreddits.map(function(option){
-				console.log(option);
 				return option.subRedditName;
 			});
 

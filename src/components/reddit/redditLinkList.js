@@ -10,13 +10,10 @@ var RedditLinkList = React.createClass({
 
 
 	render: function () {
-		console.log('items? ', this.props);
 
 		var subRedditTitle = this.props.reddits[0].data.subreddit; 
-		console.log('sub ', subRedditTitle);
 
 		var storyNodes = this.props.reddits.map(function(item) {
-			console.log('reddit item:', item);
 
 			var storyImage;
 			if (item.data.preview)
@@ -25,7 +22,7 @@ var RedditLinkList = React.createClass({
 				
 			}
 			else {
-				console.log(item.data.title + ": " + "NO PREVIEW IMAGE");
+				console.log(item.data.id + ": " + "NO PREVIEW IMAGE");
 			}
 
 			return (
@@ -50,7 +47,7 @@ var RedditLinkList = React.createClass({
 				</tr>
 			);
 		});
-		console.log('stories', storyNodes);
+
 
 		return (
 			<div>

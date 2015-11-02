@@ -10,11 +10,10 @@ var Dropdown = React.createClass({
 	render: function(){
 		
 		if(this.props.options) {
-			var dropdownValues = this.props.options.map(function(option){
-				console.log(option);
+			var dropdownValues = this.props.options.map(function(option, optionId){
 
 				return (		
-						<option >
+						<option key={optionId}>
 							<span value={option}>{option}</span>
 						</option>
 				);
